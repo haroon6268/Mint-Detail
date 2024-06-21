@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import ScrollAnimation from "react-animate-on-scroll";
 import { motion } from "framer-motion";
+import { X } from "@mui/icons-material";
 const Hero = () => {
   const imgs = [
     "carousel1.png",
@@ -35,7 +36,7 @@ const Hero = () => {
         alignItems="center"
         direction={{ xs: "column", lg: "row" }}
         maxWidth="1200px"
-        marginTop={2}
+        marginTop={{ lg: 2, xs: 6 }}
       >
         <Stack spacing={2}>
           <motion.div
@@ -48,6 +49,7 @@ const Hero = () => {
               variant="h2"
               textAlign="left"
               fontWeight="bold"
+              overflow="hidden"
             >
               Mint Detail Makes Cars Shine
             </Typography>
@@ -75,7 +77,7 @@ const Hero = () => {
             </Button>
           </motion.div>
         </Stack>
-        <Box maxWidth={{ xs: "90vw", lg: "50%" }}>
+        <Box maxWidth={{ xs: "90vw", lg: "50%" }} sx={{ overflowX: "auto" }}>
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

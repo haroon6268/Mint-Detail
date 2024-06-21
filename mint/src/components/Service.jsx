@@ -13,7 +13,7 @@ const Service = () => {
       spacing={6}
     >
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
@@ -34,7 +34,7 @@ const Service = () => {
           spacing={1}
         >
           <motion.div
-            initial={{ x: -100, opacity: 0 }}
+            initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
@@ -91,7 +91,7 @@ const Service = () => {
 
         <Stack maxWidth={{ xs: "100%", lg: "40%" }} spacing={1}>
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
+            initial={{ x: 20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}

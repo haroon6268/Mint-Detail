@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Video = () => {
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }}
+      initial={{ y: 100, opacity: 0, display: "none" }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.1 }}
       viewport={{ once: true }}

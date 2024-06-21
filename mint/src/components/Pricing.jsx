@@ -16,7 +16,7 @@ const Pricing = () => {
       rowGap={6}
     >
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ x: -30, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
@@ -31,7 +31,7 @@ const Pricing = () => {
         </Stack>
       </motion.div>
       <motion.div
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ x: 30, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
