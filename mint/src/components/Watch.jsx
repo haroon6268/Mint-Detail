@@ -1,13 +1,14 @@
 import { Box, Stack, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
-const Video = () => {
+const Watch = () => {
   return (
     <motion.div
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.1 }}
       viewport={{ once: true }}
+      minHeight="700px"
     >
       <Stack
         sx={{
@@ -29,7 +30,7 @@ const Video = () => {
         </Typography>
         <Box width={{ lg: "800px" }}>
           <video
-            src="/watch.mp4"
+            src="../assets/watch.mp4"
             style={{ height: "100%", width: "100%", overflow: "hidden" }}
             controls
           />
@@ -51,4 +52,4 @@ const Video = () => {
   );
 };
 
-export default Video;
+export default Watch;

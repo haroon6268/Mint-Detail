@@ -1,9 +1,10 @@
 import Hero from "./Hero";
 import Hygiene from "./Hygiene";
-import Video from "./Video";
+import Watch from "./Watch";
 import Service from "./Service";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
+import Video from "./Video";
 const Home = () => {
   const first = {
     title: "Have you considered the hygiene of your car's interior?",
@@ -25,7 +26,7 @@ const Home = () => {
         img={second.img}
         reverse={true}
       ></Hygiene>
-      <Video></Video>
+      <Video />
       <Service></Service>
       <Pricing></Pricing>
       <Faq></Faq>

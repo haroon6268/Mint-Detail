@@ -40,7 +40,7 @@ const Faq = () => {
             }}
           >
             <img
-              src="/src/assets/van.png"
+              src="https://ik.imagekit.io/haroon2003/Mint/van.png?updatedAt=1719000478219"
               style={{
                 objectFit: "contain",
                 height: "100%",
