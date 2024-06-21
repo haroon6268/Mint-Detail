@@ -41,7 +41,10 @@ export default function ButtonAppBar() {
                 >
                   <MenuIcon />
                 </IconButton>
-                <img src="/src/assets/mint.png" style={{ height: "40px" }} />
+                <img
+                  src="https://ik.imagekit.io/haroon2003/Mint/mint.png?updatedAt=1719000477401"
+                  style={{ height: "40px" }}
+                />
               </Stack>
               <Stack>
                 <Button

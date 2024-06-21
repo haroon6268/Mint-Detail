@@ -9,10 +9,10 @@ import { motion } from "framer-motion";
 import { X } from "@mui/icons-material";
 const Hero = () => {
   const imgs = [
-    "carousel1.png",
-    "carousel2.png",
-    "carousel4.png",
-    "carousel5.png",
+    "https://ik.imagekit.io/haroon2003/Mint/carousel1.png?updatedAt=1719000477605",
+    "https://ik.imagekit.io/haroon2003/Mint/carousel2.png?updatedAt=1719000477475",
+    "https://ik.imagekit.io/haroon2003/Mint/carousel4.png?updatedAt=1719000479862",
+    "https://ik.imagekit.io/haroon2003/Mint/carousel5.png?updatedAt=1719000478287",
   ];
   return (
     <Box
@@ -104,7 +104,7 @@ const Hero = () => {
                       }}
                     >
                       <img
-                        src={`/src/assets/${img}`}
+                        src={`${img}`}
                         style={{
                           height: "100%",
                           width: "100%",
