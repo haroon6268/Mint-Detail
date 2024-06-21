@@ -38,20 +38,20 @@ const Pricing = () => {
       >
         <Stack direction={{ lg: "row" }} spacing={4} rowGap={4}>
           <PricingCard
-            img="/src/assets/sedan1.webp"
+            img="https://ik.imagekit.io/haroon2003/Mint/sedan1.webp?updatedAt=1719000478495"
             title="$149"
             text="Exterior & Interior Detail for sedan. Book Online in less than 3 minutes!
 No Pre-payment Required"
           ></PricingCard>
           <PricingCard
-            img="/src/assets/suv1.webp"
+            img="https://ik.imagekit.io/haroon2003/Mint/suv2.webp?updatedAt=1719000478128"
             title="$199"
             text="Exterior & Interior Detail for 5-Seat SUVs. Book Online in less than 3 minutes!
 
           No Pre-payment Required"
           ></PricingCard>
           <PricingCard
-            img="/src/assets/suv2.webp"
+            img="https://ik.imagekit.io/haroon2003/Mint/suv1.webp?updatedAt=1719000478031"
             title="$240"
             text="Exterior & Interior Detail for 7-Seat SUVs. Book Online in less than 3 minutes!
 

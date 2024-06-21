@@ -29,7 +29,7 @@ const Video = () => {
         </Typography>
         <Box width={{ lg: "800px" }}>
           <video
-            src="/src/assets/watch.mp4"
+            src="/watch.mp4"
             style={{ height: "100%", width: "100%", overflow: "hidden" }}
             controls
           />

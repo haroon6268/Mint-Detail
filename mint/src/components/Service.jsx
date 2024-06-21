@@ -8,7 +8,7 @@ const Service = () => {
         minHeight: { lg: "1200px", xs: "150vh" },
         alignItems: "center",
         justifyContent: "center",
-        padding: 2,
+        padding: 3.5,
       }}
       spacing={6}
     >
@@ -77,7 +77,7 @@ const Service = () => {
               }}
             >
               <img
-                src="/src/assets/after.png"
+                src="https://ik.imagekit.io/haroon2003/Mint/after.png?updatedAt=1719000477087"
                 style={{
                   objectFit: "cover",
                   height: "100%",
@@ -137,7 +137,7 @@ const Service = () => {
               }}
             >
               <img
-                src="/src/assets/carousel6.png"
+                src="https://ik.imagekit.io/haroon2003/Mint/carousel6.png?updatedAt=1719000477218"
                 style={{
                   objectFit: "cover",
                   height: "100%",
