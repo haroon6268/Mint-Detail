@@ -9,6 +9,7 @@ import {
 import { useContext, useEffect, useState } from "react";
 import { LocationContext } from "../App";
 import Autocomplete from "./Autocomplete";
+import BookingCard from "./BookingCard";
 
 const Address = () => {
   const [loc, setLoc] = useContext(LocationContext);
@@ -97,9 +98,32 @@ const Address = () => {
             top: 0,
             right: service ? 0 : "-100%",
             transition: "all 1s ease-in-out",
+            justifyContent: "center",
+            alignContent: "center",
+            gap: 1,
           }}
+          direction="row"
+          flexWrap="wrap"
+          spacing
         >
-          <p style={{ transition: "all 1s ease-in-out" }}>Hello World!</p>
+          <Typography variant="h4" textAlign={"center"} fontWeight="bold">
+            Select a Service
+          </Typography>
+          <BookingCard
+            img="https://ik.imagekit.io/haroon2003/Mint/sedan1.webp?updatedAt=1719000478495"
+            title="$149"
+            text="Sedan"
+          ></BookingCard>
+          <BookingCard
+            img="https://ik.imagekit.io/haroon2003/Mint/suv2.webp?updatedAt=1719000478128"
+            title="$199"
+            text="SUV"
+          ></BookingCard>
+          <BookingCard
+            img="https://ik.imagekit.io/haroon2003/Mint/suv1.webp?updatedAt=1719000478031"
+            title="$240"
+            text="7+ Seat SUV"
+          ></BookingCard>
         </Stack>
       </Stack>
     </APIProvider>
