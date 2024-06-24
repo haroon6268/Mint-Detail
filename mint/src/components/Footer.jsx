@@ -10,7 +10,6 @@ const Footer = () => {
       sx={{
         backgroundColor: "#1d192e",
         padding: 10,
-        marginTop: 6,
       }}
     >
       <Stack direction="row">

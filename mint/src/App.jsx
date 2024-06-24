@@ -9,6 +9,9 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import Faq from "./components/Faq";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import Address from "./components/Address";
+import { useState, useEffect, useContext, createContext } from "react";
+import { APIProvider } from "@vis.gl/react-google-maps";
 function App() {
   const first = {
     title: "Have you considered the hygiene of your car's interior?",
@@ -25,18 +28,48 @@ function App() {
     typography: {
       fontFamily: "Poppins, sans-serif",
     },
+    palette: {
+      primary: {
+        main: "#97e1b0",
+      },
+      secondary: {
+        main: "#1d192e",
+      },
+    },
   });
+
+  const [loc, setLoc] = useState({ lat: 22.54992, lng: 0 });
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const x = pos.coords.latitude;
+      const y = pos.coords.longitude;
+      setLoc({ lat: x, lng: y });
+    });
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
-      <Navbar></Navbar>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Navbar></Navbar>
+        <div style={{ overflow: "hidden" }}>
+          <LocationContext.Provider value={[loc, setLoc]}>
+            <APIProvider
+              apiKey={import.meta.env.VITE_MAPS}
+              libraries={["places"]}
+            >
+              <Routes>
+                <Route path="/" element={<Home />} />
+
+                <Route path="/book" element={<Address />} />
+              </Routes>
+            </APIProvider>
+            <Footer></Footer>
+          </LocationContext.Provider>
+        </div>
       </BrowserRouter>
-      <Footer></Footer>
     </ThemeProvider>
   );
 }
 
 export default App;
+export const LocationContext = createContext();
