@@ -3,11 +3,23 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import { useContext } from "react";
+import BookingContext from "./BookingContext";
 
-const BookingCard = ({ img, title, text }) => {
+const BookingCard = ({ img, title, text, pkg }) => {
+  const [booking, setBooking] = useContext(BookingContext);
   return (
-    <Card sx={{ minWidth: 170, maxWidth: 170, maxHeight: 250, margin: 4 }}>
-      <CardActionArea>
+    <Card sx={{ minWidth: 170, maxWidth: 170, maxHeight: 250 }}>
+      <CardActionArea
+        onClick={() => {
+          setBooking({
+            ...booking,
+            package: pkg,
+            serviceSelected: true,
+            price: parseInt(title.substring(1)),
+          });
+        }}
+      >
         <CardMedia
           component="img"
           sx={{ objectFit: "contain", height: 100 }}
@@ -24,7 +36,7 @@ const BookingCard = ({ img, title, text }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             width: "7rem",
@@ -35,7 +47,7 @@ const BookingCard = ({ img, title, text }) => {
           }}
         >
           Book Now
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );
